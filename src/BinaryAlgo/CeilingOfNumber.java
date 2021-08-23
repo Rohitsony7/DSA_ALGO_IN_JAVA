@@ -5,7 +5,7 @@ public class CeilingOfNumber {
     public static void main(String[] args) {
         int[] arr = {2, 3, 5, 9, 14, 16, 18}; // given array is sorted, apply binary
 
-        int target = 15;
+        int target = 20;
 
         System.out.println(getCeiling(arr, target));
     }
@@ -14,6 +14,15 @@ public class CeilingOfNumber {
 
         int start = 0;
         int end = arr.length - 1;
+        //for ceiling
+        if (target > arr[arr.length - 1]) {
+            return -1;
+        }
+
+        //for floor
+//        if (target < arr[0]) {
+//            return -1;
+//        }
 
 
         while (end >= start) {
@@ -24,8 +33,8 @@ public class CeilingOfNumber {
             if (target < arr[mid]) end = mid - 1;
 
         }
-//      return arr[start]; // for ceiling value
-        return arr[end]; // for floor value
+        return arr[start]; // for ceiling value
+//        return arr[end]; // for floor value
 
     }
 }
