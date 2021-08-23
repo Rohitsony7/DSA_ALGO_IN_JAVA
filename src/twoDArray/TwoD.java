@@ -27,7 +27,6 @@ public class TwoD {
         }
 
 
-
         for (int[] singleArray : arr) {
             System.out.println(Arrays.toString(singleArray));
         }
@@ -36,12 +35,12 @@ public class TwoD {
 
 
         // rotation of array
-        int [][] rotated = new int[3][3];
+        int[][] rotated = new int[3][3];
 
         for (int row = 0; row < arr.length; row++) {
             for (int col = 0; col < arr[row].length; col++) {
 
-                 rotated[row][col]= arr[col][row] ;
+                rotated[row][col] = arr[col][row];
 
             }
         }
@@ -49,7 +48,6 @@ public class TwoD {
         for (int[] singleArray : rotated) {
             System.out.println(Arrays.toString(singleArray));
         }
-
 
     }
 }
