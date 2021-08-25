@@ -6,7 +6,7 @@ public class MountainArrayPeak {
 
     public static void main(String[] args) {
 
-        System.out.println(peakIndexInMountainArray(new int[]{0, 2, 1, 0}));
+        System.out.println(peakIndexInMountainArray(new int[]{0, 1, 2, 1, 3, 5, 6, 4}));
     }
 
     public static int peakIndexInMountainArray(int[] arr) {
@@ -15,9 +15,10 @@ public class MountainArrayPeak {
         int end = arr.length - 1;
         while (true) {
             int mid = start + (end - start) / 2;
+            if (start == end) return start; // returning peak index
             if (arr[mid] > arr[mid + 1]) end = mid;
             else start = mid + 1;
-            if (start == end) return start; // returning peak index
+
         }
 
     }
