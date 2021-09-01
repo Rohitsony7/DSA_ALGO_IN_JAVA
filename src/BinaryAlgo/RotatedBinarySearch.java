@@ -5,7 +5,8 @@ public class RotatedBinarySearch {
 
     public static void main(String[] args) {
 
-        System.out.println(search(new int[]{1, 2, 3, 4, -3, -2, -1, 0,}, 2));
+//        System.out.println(search(new int[]{1, 2, 3, 4, -3, -2, -1, 0,}, 2));
+        System.out.println(pivot(new int[]{2, 2, 2, 2, 2, 3, 9, 2, 2, 2}));
     }
 
 
