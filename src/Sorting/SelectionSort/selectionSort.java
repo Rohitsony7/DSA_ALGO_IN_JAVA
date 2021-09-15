@@ -1,4 +1,4 @@
-package Sorting.bubbleSort;
+package Sorting.SelectionSort;
 
 
 // either start with max and swap with last element in unsorted array
@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class selectionSort {
     public static void main(String[] args) {
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {0, 2, 2, 8, 6, 4, 3, 7};
         selection(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -18,7 +18,7 @@ public class selectionSort {
         for (int i = 0; i < arr.length; i++) {
 
             int maxIndex = 0;
-            int lastIndexOfArray = arr.length - i - 1;
+            int lastIndexOfUnsortedArray = arr.length - i - 1;
 
             for (int j = 0; j < arr.length - i; j++) {
                 if (arr[maxIndex] < arr[j]) {
@@ -26,15 +26,15 @@ public class selectionSort {
                 }
             }
 
-            swap(arr, maxIndex, lastIndexOfArray);
+            swap(arr, maxIndex, lastIndexOfUnsortedArray);
         }
 
     }
 
-    private static void swap(int[] arr, int maxIndex, int lastIndexOfArray) {
+    private static void swap(int[] arr, int maxIndex, int lastIndexOfUnsortedArray) {
 
-        int temp = arr[lastIndexOfArray];
-        arr[lastIndexOfArray] = arr[maxIndex];
+        int temp = arr[lastIndexOfUnsortedArray];
+        arr[lastIndexOfUnsortedArray] = arr[maxIndex];
         arr[maxIndex] = temp;
     }
 }
