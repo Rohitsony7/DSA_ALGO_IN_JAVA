@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class selectionSort {
     public static void main(String[] args) {
-        int[] arr = {0, 2, 2, 8, 6, 4, 3, 7};
+        int[] arr = {0, 2, 2, 8, 6, 4, 3, 7, 8};
         selection(arr);
         System.out.println(Arrays.toString(arr));
     }
