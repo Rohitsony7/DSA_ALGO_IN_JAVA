@@ -6,12 +6,13 @@ public class TwoDBinarySearchRowSorted {
     public static void main(String[] args) {
 
         int[][] arr = {
-                {1, 2, 3, 4},
-                {5, 6, 7, 8},
-                {9, 10, 11, 12}
+                {1, 4, 7, 11, 15},
+                {2, 5, 8, 12, 19},
+                {10, 13, 14, 17, 24},
+                {18, 21, 23, 26, 30}
         };
 
-        System.out.println(Arrays.toString(search(arr, 12)));
+        System.out.println(Arrays.toString(search(arr, 17)));
 
     }
 
