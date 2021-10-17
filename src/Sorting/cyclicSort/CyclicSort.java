@@ -6,11 +6,12 @@ import java.util.Arrays;
 public class CyclicSort {
 
     public static void main(String[] args) {
-        int[] arr = {5, 4, 3, 2, 1};
-        sort(arr);
+        int[] arr = {5, 4, 3, 2, 1, 0};
+        sortAlgo(arr);
         System.out.println(Arrays.toString(arr));
     }
 
+    // if array is starting from [1,N]
     private static void sort(int[] arr) {
 
         int i = 0;
@@ -31,6 +32,21 @@ public class CyclicSort {
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
+
+    }
+
+    // if array is starting from [0,N]
+    private static void sortAlgo(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+
+            if (i != arr[i]) {
+                swap(arr, i, arr[i]);
+            } else {
+                i++;
+            }
+
+        }
 
     }
 }

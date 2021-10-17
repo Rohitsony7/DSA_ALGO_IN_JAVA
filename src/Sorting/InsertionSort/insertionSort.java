@@ -11,7 +11,7 @@ public class insertionSort {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 3, 2, 1, 0};
-        insertion(arr);
+        insertionSortAlgo(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -30,6 +30,23 @@ public class insertionSort {
                 }
             }
         }
+    }
+
+    private static void insertionSortAlgo(int[] arr) {
+
+        for (int i = 0; i < arr.length - 1; i++) {
+
+            for (int j = i + 1; j > 0; j--) {
+
+                if (arr[j] < arr[j - 1]) {
+
+                    swap(arr, j - 1, j);
+                } else {
+                    break;
+                }
+            }
+        }
+
     }
 
     private static void swap(int[] arr, int j, int i) {
