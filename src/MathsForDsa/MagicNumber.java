@@ -22,6 +22,8 @@ public class MagicNumber {
 
         System.out.println(ans);
 
+        //complexity will be log(num)
+
 
     }
 
