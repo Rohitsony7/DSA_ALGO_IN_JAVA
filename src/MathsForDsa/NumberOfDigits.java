@@ -4,7 +4,7 @@ public class NumberOfDigits {
 
     public static void main(String[] args) {
 
-        int num = 8;
+        int num = 1231212;
         int base = 2;
 
         int ans = (int) (Math.log(num) / Math.log(base)) + 1;
