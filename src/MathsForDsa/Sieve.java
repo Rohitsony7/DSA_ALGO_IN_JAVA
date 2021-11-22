@@ -28,7 +28,7 @@ public class Sieve {
 
             isPrime[i] = !isPrime[i];
             if (isPrime[i]) {
-                System.out.print(i + " ");
+                System.out.print(i + "   ");
             }
 
 
