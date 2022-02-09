@@ -1,10 +1,12 @@
 class Solution {
     public void rotate(int[] nums, int k) {
         
-        // if k -ve 
-        if (k < 0) k+=nums.length;
+          k = k % nums.length;
         
-        k = k % nums.length;
+         // if k -ve 
+         if (k < 0) k+=nums.length;
+        
+      
         
         // given => p1 + p2, want => p2 + p1
         // all = reverse(p1) + reverse(p2)
