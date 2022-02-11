@@ -6,7 +6,7 @@ public class bubbleSort1 {
 
     public static void main(String[] args) {
 
-        int arr[] = {1,2,3,4,5};
+        int arr[] = {1,2,3,4,0};
         System.out.println(Arrays.toString(sortIt(arr)));
     }
 
@@ -15,7 +15,7 @@ public class bubbleSort1 {
 
 
         int start=0;
-        int end = arr.length-1;
+        int end = arr.length;
 
         for(int i=0; i< end; i++){
 
