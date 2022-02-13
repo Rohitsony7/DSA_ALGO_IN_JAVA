@@ -8,7 +8,7 @@ class Solution {
             if(nums[i]<nums.length && i !=nums[i] ) {
               
                     int temp = nums[nums[i]];
-                    nums[nums[i]]=nums[i];
+                    nums[nums[i]]=nums[i]; 
                     nums[i] = temp;
             }else{
                 i++;
