@@ -9,7 +9,10 @@ public class bubbleSort1 {
         int arr[] = {4,5,1,2,3,-2,0,-45,90,-56};
 //        System.out.println(Arrays.toString(sortItByBubble(arr)));
 //        System.out.println(Arrays.toString(sortItBySelection(arr)));
-        System.out.println(Arrays.toString(getSortByInsertion(arr)));
+//        System.out.println(Arrays.toString(getSortByInsertion(arr)));
+
+        int arrForSelection[] = {5,4,3,2,1};
+        System.out.println(Arrays.toString((sortItBySelection(arrForSelection))));
     }
 
 
@@ -103,6 +106,20 @@ public class bubbleSort1 {
 
         return  arr;
 
+
+    }
+
+
+    //when there is [1,N] array
+    public  static  int[] getSortBySelection(int arr[]){
+        int i=0;
+        while (i<arr.length){
+
+            if(arr[i] == i+1 ) i++;
+            else  swap(arr, arr[i]-1, i);
+        }
+
+        return arr;
 
     }
 }
