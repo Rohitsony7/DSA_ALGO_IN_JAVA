@@ -18,6 +18,7 @@ class Solution {
         if(nums[j]-1 !=j) return nums[j];
             
         }
+        
         return nums[nums.length-1];
     }
 }
