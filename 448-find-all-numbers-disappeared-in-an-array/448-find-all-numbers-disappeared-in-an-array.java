@@ -9,8 +9,7 @@ class Solution {
           
           int correctIndex = nums[i]-1;
           
-            if( correctIndex ==nums[i]  ) i++;
-          else if( nums[i] == nums[correctIndex]) i++;
+          if( nums[i] == nums[correctIndex]) i++;
           else{
               
               int temp = nums[i];
