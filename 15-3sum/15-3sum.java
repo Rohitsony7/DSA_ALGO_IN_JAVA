@@ -55,6 +55,8 @@ class Solution {
         
         for(int i=start; i < end; i++){
             
+          
+            
             if(hm.containsKey(arr[i])){
 
                 alTwoSum.add(Arrays.asList(hm.get(arr[i]), arr[i]));
