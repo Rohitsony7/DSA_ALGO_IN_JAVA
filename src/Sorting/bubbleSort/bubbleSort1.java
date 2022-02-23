@@ -11,7 +11,7 @@ public class bubbleSort1 {
 //        System.out.println(Arrays.toString(sortItBySelection(arr)));
 //        System.out.println(Arrays.toString(getSortByInsertion(arr)));
 
-        int arrForSelection[] = {5,4,3,2,1};
+        int arrForSelection[] = {5,4,3,2,1,3,4};
         System.out.println(Arrays.toString((sortItBySelection(arrForSelection))));
     }
 
