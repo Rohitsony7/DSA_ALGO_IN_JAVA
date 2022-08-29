@@ -9,7 +9,7 @@ class Solution {
               for(int j=0; j<nums.length; j++ ){
                   
                   
-                  if(nums[i] > nums[j]) sum++;
+                  if(nums[i] > nums[j] && i!=j) sum++;
                   
               }
             arr[i]= sum;
