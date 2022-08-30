@@ -8,12 +8,12 @@ class Solution {
             al.add(index[i], nums[i]); // help us to ordering the array
         }
         
-        int arr[]= new int[al.size()];
         
-        for(int j=0; j<al.size(); j++){
-            
-            arr[j] = al.get(j);
-        }
+       int arr[]= al.stream().mapToInt(Integer::intValue).toArray();
+      
+        
+        
+        
         
         return arr;
         
