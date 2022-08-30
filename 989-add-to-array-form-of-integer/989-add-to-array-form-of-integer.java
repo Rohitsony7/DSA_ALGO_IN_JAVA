@@ -16,7 +16,7 @@ class Solution {
             k = k/10;
         } 
         
-        // Collections.reverse(ll);
+
         
         return ll;
     }
