@@ -1,29 +1,33 @@
 class Solution {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
-        int index;
         
+        int count =0;
         switch(ruleKey){
                 
-            case "type": index =0;
+            case "type":
+              for(List<String> item : items){
+                    
+                    if(item.get(0).equals(ruleValue)) count++;
+                }
                 break;
-            case "color": index=1;
-                break;
-            case "name": index=2;
-                break;
+            case "color":
+                   for(List<String> item : items){
+                    
+                    if(item.get(1).equals(ruleValue)) count++;
+                }
+                     break;
+            case "name":
+                for(List<String> item : items){
+                    
+                    if(item.get(2).equals(ruleValue)) count++;
+                }
+                     break;
             default:
-                index=-1;
-        }
-        
-        int count=0;
-        for(List<String> item: items){
-            
-            if(item.get(index).equals(ruleValue)) count++;
+                 count=0;
+                break;
         }
         
         return count;
-        
-        
-        
         
     }
 }
