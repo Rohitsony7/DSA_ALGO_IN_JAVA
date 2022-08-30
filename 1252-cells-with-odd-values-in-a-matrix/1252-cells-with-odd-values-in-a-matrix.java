@@ -19,7 +19,7 @@ class Solution {
         int count=0;
         for(int myarr[] : arr){
             
-            for(int val : myarr) if (val %2 ==1) count++;
+            for(int val : myarr) if ((val&1)==1) count++;
         }
         
         return count;
