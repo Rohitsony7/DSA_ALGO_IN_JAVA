@@ -8,8 +8,7 @@ class Solution {
              k = (num[i]+k)/10;                      
         }
         
-        System.out.println(k); 
-        //still if K>0,  value left to add in list
+
         
         while(k>0){
             ll.add(0,k%10);
