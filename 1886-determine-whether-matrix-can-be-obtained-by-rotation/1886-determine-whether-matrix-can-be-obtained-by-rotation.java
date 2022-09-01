@@ -17,14 +17,7 @@ class Solution {
  public static boolean CheckArray(int[][] mat,int[][] target){
         for (int i = 0; i < mat.length; i++) {
             for (int j = 0; j < mat.length; j++) {
-                if (mat[i][j]==target[i][j]){
-                    continue;
-
-
-                }
-                else {
-                    return false;
-                }
+                if (mat[i][j]!=target[i][j]) return false;
 
             }
 
@@ -39,19 +32,12 @@ class Solution {
         
          for(int i=0; i< mat.length; i++){
             
-            for(int j=mat[i].length-1; j>= 0; j--){
+            for(int j=0; j<mat[i].length; j++){
                 
-                afterRotation[i][mat[i].length-1-j] = mat[j][i];
+                afterRotation[mat[i].length-1-j][i] = mat[i][j];
             }
         }
         
-            for(int [] val: afterRotation){
-                    
-                    System.out.println(Arrays.toString(val));
-                    
-                }
-                
-                System.out.println("-------After rotation-------");
         
         return afterRotation;
         
