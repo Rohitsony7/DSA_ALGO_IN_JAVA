@@ -16,7 +16,7 @@ class Solution {
         }
            
         
-        for(int i=0; i < arr.length; i++){
+        for(int i=0; i <=100; i++){
             
             if(arr[i] > maxPopulation) {
                 
