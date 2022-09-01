@@ -5,7 +5,7 @@ class Solution {
         
         for(int i=0; i< nums.length; i++){
             
-            if(hm.get(nums[i]) !=null){
+            if(hm.containsKey(nums[i])){
                 
                 return new int[]{i, hm.get(nums[i])};
             }
