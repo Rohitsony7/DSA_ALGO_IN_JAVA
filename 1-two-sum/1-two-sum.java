@@ -1,24 +1,28 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         
-          int res[] = new int[2];
+       int res[] = new int[2];
         
-        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+       HashMap<Integer, Integer> map = new HashMap<>(); //we can put pair wise data, like num1, target - num1
         
-        for(int i=0; i< nums.length; i++){
+        for(int i = 0; i < nums.length; i++){
             
-            if(hm.containsKey(nums[i])){
-                res[0]=i;
-                res[1]=hm.get(nums[i]);
-                return res;
+            if(map.containsKey(nums[i])){
+                
+                res[0] = map.get(nums[i]);
+                res[1] = i;
+                break;
+            }else{
+                
+                map.put(target-nums[i], i);
             }
             
-            else{
-                hm.put(target-nums[i], i);
-            }
+            
+            
         }
         
         return res;
+      
         
     }
 }
