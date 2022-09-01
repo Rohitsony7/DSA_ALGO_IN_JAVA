@@ -7,7 +7,6 @@ class Solution {
             
             if(nums[i] !=num) {
                 
-              
                 num=nums[i];
                nums[count++]=nums[i];
               
