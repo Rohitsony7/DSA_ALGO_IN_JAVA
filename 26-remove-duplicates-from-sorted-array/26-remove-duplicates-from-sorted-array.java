@@ -1,0 +1,20 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        
+        int num=-101;
+        int count=0;
+        int j=0;
+        for(int i=0; i<nums.length; i++){
+            
+            if(nums[i] !=num) {
+                
+                count++;
+                num=nums[i];
+               nums[j++]=nums[i];
+              
+        }}
+        
+        return count;
+        
+    }
+}
