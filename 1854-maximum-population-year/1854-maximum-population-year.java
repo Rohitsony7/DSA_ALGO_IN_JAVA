@@ -3,20 +3,18 @@ class Solution {
         
         
         int arr[] = new int[101];
-        int minYear = 1950;
+        int earlierYear =0;
+        int maxPopulation=0;
         
         for(int timeSpan[] : logs){
             
-            for(int year = timeSpan[0]-minYear; year < timeSpan[1]-minYear; year++ ){
+            for(int year = timeSpan[0]-1950; year < timeSpan[1]-1950; year++ ){
                 
                 arr[year] += 1;  
             }
             
         }
-        
-        int earlierYear =0;
-        int maxPopulation=0;
-        
+           
         
         for(int i=0; i < arr.length; i++){
             
@@ -28,7 +26,7 @@ class Solution {
             
         }
         
-        return earlierYear+minYear;
+        return earlierYear+1950;
         
         
     }
