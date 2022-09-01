@@ -3,11 +3,9 @@ class Solution {
         
           for(int i=0; i<4; i++){
             
-            if(CheckArray(mat,target)) return true;
-   
+            if(CheckArray(mat,target)) return true;   
                mat= rotationOfArray(mat);
                 
-
         }
               return false;
             
