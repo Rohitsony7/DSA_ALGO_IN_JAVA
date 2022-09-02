@@ -3,11 +3,11 @@ class Solution {
         
         ArrayList<Integer> al = new ArrayList<Integer>();
         
-        int col=0;
+       
       
         for(int [] arr : matrix){
           
-            col=checkMinInRow(arr);
+            int col=checkMinInRow(arr);
             int possibleLucky = arr[col];
             int max= Integer.MIN_VALUE;
             
