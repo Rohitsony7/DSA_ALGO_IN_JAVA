@@ -5,8 +5,7 @@ class Solution {
                      
         for(int [] arr : matrix){
           
-            int col=checkMinInRow(arr);
-            
+            int col=checkMinInRow(arr);            
             int max= Integer.MIN_VALUE;
             
             for(int r=0; r<matrix.length; r++){
