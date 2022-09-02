@@ -2,9 +2,7 @@ class Solution {
     public List<Integer> luckyNumbers (int[][] matrix) {
         
         ArrayList<Integer> al = new ArrayList<Integer>();
-        
-       
-      
+                     
         for(int [] arr : matrix){
           
             int col=checkMinInRow(arr);
