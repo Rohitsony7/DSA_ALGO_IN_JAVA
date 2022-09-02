@@ -6,7 +6,7 @@ class Solution {
         for(int [] arr : matrix){
           
             int col=checkMinInRow(arr);
-            int possibleLucky = arr[col];
+            
             int max= Integer.MIN_VALUE;
             
             for(int r=0; r<matrix.length; r++){
@@ -18,7 +18,7 @@ class Solution {
                 
             }
             
-            if(max == possibleLucky) al.add(max);            
+            if(max == arr[col]) al.add(max);            
             
             
         }
