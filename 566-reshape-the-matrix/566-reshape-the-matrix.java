@@ -6,7 +6,8 @@ class Solution {
         int reshape[][] = new int[r][c];
         
    
-        int i=0,j=0;
+        int i=0;
+        int j=0;
         for(int[] arr:mat){
             for(int val : arr){
                 
