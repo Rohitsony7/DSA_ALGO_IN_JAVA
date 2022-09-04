@@ -4,7 +4,7 @@ class Solution {
         int count=0;
         for(int val : nums){ 
             
-            if((int)(Math.log10(val) + 1) %2==0) count++;
+            if(((int)(Math.log10(val) + 1) & 1)==0 ) count++;
         }
         
         return count;
