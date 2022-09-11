@@ -6,7 +6,9 @@ class Solution {
         for(int val : nums){
             sum+=val;
             max = Math.max(max, sum);
+            
             if(sum<0) sum = 0;
+            
         }
         
         return max;
