@@ -1,44 +1,40 @@
 class Solution {
     public void sortColors(int[] nums) {
         
-        HashMap<Integer, Integer> hm = new HashMap<>();
+        int low=0, mid=0;
+        int high = nums.length-1;
         
-        int count1=0, count2=0, count3=0;
-        
-        for(int val : nums){
-            
-            switch(val){
-                    
+       while( mid <= high){
+           
+           switch(nums[mid]){
+                   
                 case 0:
-                    hm.put(0, ++count1);
-                    break;
-                
-                case 1:
-                    hm.put(1,++count2);
-                    break;
-                case 2:
-                    hm.put(2,++count3);
-                    break;
-                default:
-                    break;
-                    
-            }
-        }
-        
-        count1=0;
-        
-        
-        
-        for(int key : hm.keySet()){
-
-           for(int i=1; i<=hm.get(key); i++){
-              nums[count1++] = key;
-             
+                   swap(nums,low, mid);
+                   low++;
+                   mid++;
+                   break;
+                 
+               case 1:
+                   mid++;
+                   break;
+            
+               case 2:
+                   swap(nums,high, mid);
+                   high--;
            }
-          
-        }
+       }
         
-       System.out.println(Arrays.toString(nums));
+        System.out.println(Arrays.toString(nums));
+        
+         
         
     }
+    
+    public static void swap(int nums[], int i, int j){
+                      int temp = nums[i];
+                      nums[i] = nums[j];
+                      nums[j]= temp;
+    }
+    
+
 }
