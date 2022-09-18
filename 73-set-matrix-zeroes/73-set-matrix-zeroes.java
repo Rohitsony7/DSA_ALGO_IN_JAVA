@@ -18,7 +18,6 @@ class Solution {
             }
         }
         
-        System.out.println(listR +" : "+ listC);
         
         for(int col=0; col < matrix[0].length; col++){
             
