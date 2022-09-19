@@ -12,7 +12,7 @@ public class Solution extends GuessGame {
         
         int start = 1;
         int end = n;
-     int mid=0;
+        int mid=0;
         
         while(start <= end){
             
