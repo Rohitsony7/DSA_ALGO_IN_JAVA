@@ -6,7 +6,7 @@ public class Solution extends VersionControl {
         
         int start=1;
         int end=n;
-        int possibleRes=0;
+      
         
         while(start <=end){
             
@@ -15,7 +15,6 @@ public class Solution extends VersionControl {
             if(isBadVersion(mid)) {
                 
                 end = mid-1;
-                possibleRes=mid;
             }else{
                 start=mid+1;
             }
@@ -23,7 +22,7 @@ public class Solution extends VersionControl {
             
         }
         
-        return possibleRes;
+        return start;
         
     }
 }
