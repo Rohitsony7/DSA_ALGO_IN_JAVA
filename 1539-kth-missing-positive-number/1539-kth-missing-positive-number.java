@@ -3,15 +3,16 @@ class Solution {
         
      if( arr[0] > k){
          return k;
-     }  
-        int i=0;
-        int index=0;
-        while(i < arr.length && arr[i]-(i+1)< k){
+     }
+        
+        
+        for(int val:arr){
             
-            index=++i;
+            if(val <= k) k++;
+            else break;
         }
         
-        return k+index;
+        return k;
     }
     
 }
