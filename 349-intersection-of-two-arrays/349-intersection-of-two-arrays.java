@@ -18,7 +18,10 @@ class Solution {
             if(hm.get(val)) al.add(val);
         }
         
-          int[] arr = al.stream().mapToInt(i -> i).toArray();
-        return arr;
+        int[] res = new int[al.size()];
+        int i=0;
+        for(int val:al) res[i++]=val;
+        
+        return res;
    }
 }
