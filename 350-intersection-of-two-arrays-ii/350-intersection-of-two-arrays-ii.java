@@ -1,43 +1,36 @@
 class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
         
-        HashMap<Integer, Integer> hm1 = new HashMap<Integer, Integer>();
-        HashMap<Integer, Integer> hm2 = new HashMap<Integer, Integer>();
+        int arr1[] = new int[1001];
+        int arr2[] = new int[1001];
+        
+        for(int val : nums1){
+            
+            arr1[val]+=1;
+            
+        }
+        
+        for(int val : nums2){
+            
+              arr2[val]+=1;
+        }
+        
         ArrayList<Integer> al = new ArrayList<Integer>();
         
-        for(int val:nums1){
+        for(int i=0; i<arr1.length; i++){
             
-            if(hm1.containsKey(val)){
-                hm1.put(val, hm1.get(val)+1);
-            }else{
-                hm1.put(val, 1);
-            }
-        }
-        
-          for(int val:nums2){
-            
-            if(hm2.containsKey(val)){
-                hm2.put(val, hm2.get(val)+1);
-            }else{
-                hm2.put(val, 1);
-            }
-        }
-        
-        
-        for(int key : hm1.keySet()){
-            
-            if(hm2.containsKey(key)){
+            for(int j=0; j< Math.min(arr1[i], arr2[i]); j++){
+                al.add(i);
                 
-                for(int i=0; i<Math.min(hm2.get(key), hm1.get(key)); i++) al.add(key);
             }
-            
-            
         }
         
-        int [] res = new int[al.size()];
-        int i=0;
-        for(int val:al) res[i++]=val;
-        return res;
+        int arr [] = new int[al.size()];
         
+        for(int k=0; k< arr.length; k++){
+            
+            arr[k] = al.get(k);
+        }
+        return arr;
     }
 }
