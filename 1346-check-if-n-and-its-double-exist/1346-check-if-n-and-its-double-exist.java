@@ -6,13 +6,11 @@ class Solution {
         
         for(int i=0; i< arr.length; i++){
             
-            int j=0;
-            int val = arr[i]*2;
             
-            while(j<arr.length) {
+            for(int j=0; j< arr.length; j++) {
                 
-                if(i!=j && arr[j]==val) return true;
-                j++;
+                if(i!=j && arr[j]==arr[i]*2) return true;
+            
                 
             }
             
