@@ -9,28 +9,16 @@ class Solution {
             arr1[val]+=1;
             
         }
-        
+        int count=0;
         for(int val : nums2){
             
-              arr2[val]+=1;
+             if(arr1[val] >0){
+                 arr2[count++] = val;
+                 arr1[val]--;
+             }
         }
         
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        
-        for(int i=0; i<arr1.length; i++){
-            
-            for(int j=0; j< Math.min(arr1[i], arr2[i]); j++){
-                al.add(i);
-                
-            }
-        }
-        
-        int arr [] = new int[al.size()];
-        
-        for(int k=0; k< arr.length; k++){
-            
-            arr[k] = al.get(k);
-        }
-        return arr;
+        return Arrays.copyOfRange(arr2,0,count);
+      
     }
 }
