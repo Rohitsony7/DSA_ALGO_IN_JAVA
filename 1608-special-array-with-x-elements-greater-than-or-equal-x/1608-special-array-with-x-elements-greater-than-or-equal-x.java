@@ -17,7 +17,6 @@ class Solution {
             len-=arr[j];
             
             
-            
         }
         
         return -1;
