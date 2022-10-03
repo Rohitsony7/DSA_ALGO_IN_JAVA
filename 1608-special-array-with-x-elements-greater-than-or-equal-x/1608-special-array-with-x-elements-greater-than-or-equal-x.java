@@ -6,11 +6,7 @@ class Solution {
         for(int i=1; i<= 1000; i++ ){
             
             int count=0;
-            for(int j=0; j < nums.length; j++){
-                
-                if(nums[j] >= i) count++;
-                
-            }
+            for(int  num : nums) if(num >= i) count++;
             
             if(count == i) return i;
     
