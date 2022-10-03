@@ -1,15 +1,23 @@
 class Solution {
     public int specialArray(int[] nums) {
         
-        if(nums[0]==1 && nums.length ==1) return 1;
         
-        for(int i=1; i<= 1000; i++ ){
+        int [] arr = new int[1001];
+        int len = nums.length;
+        
+        for(int num : nums){
             
-            int count=0;
-            for(int  num : nums) if(num >= i) count++;
+            arr[num]++;
             
-            if(count == i) return i;
-    
+        }
+        
+        for(int j=0; j<1001; j++){
+            
+            if(j == len) return j;
+            len-=arr[j];
+            
+            
+            
         }
         
         return -1;
