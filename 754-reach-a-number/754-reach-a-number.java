@@ -6,7 +6,7 @@ class Solution {
         
         while(sum < target  || (sum-target)%2==1 ){
         
-            sum = sum + (++step);
+            sum +=  ++step;
        }
     
     return step;
